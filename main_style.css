@@ -1,49 +1,45 @@
 *{
-    margin:5px;
+    margin:10px;
     background-color: rgb(240, 240, 240);
     font-family:Helvetica;
 }
 
 h1 {
-    color:darkslategrey;
-    font-size:25px;
     text-align:center;
+    background-color:black;
+    font-weight:lighter;
+    height:155px;   
 }
 
 
 p {
     text-align:justify;
-    color:rgb(219, 6, 6);
-    
+    color:black;   
 }
+
 
 #principalmenu{
     margin:5px;
     padding:0px;
     list-style-type:none;
+    text-align: center;
 }
 
 #principalmenu a {
     width:100px;
     text-decoration:none;
     text-align:center;
-    color:darkgray;
-    background-color: darkslategrey;
+    color:rgb(255, 255, 255);
+    background-color: rgb(14, 13, 13);
     padding:3px 5px;
     border-right:1px solid darkslategray;
     display:block;
 }
 
 #principalmenu li{
-    float:left;
+    float:right;
 }
 
 #principalmenu a:hover{
     background-color:darkgrey;
-}
-
-#cabecera{
-    background-color: darkslategray;
-    color:darkolivegreen;
-    font-size: 18px;
 }
