@@ -1,0 +1,49 @@
+*{
+    margin:5px;
+    background-color: rgb(240, 240, 240);
+    font-family:Helvetica;
+}
+
+h1 {
+    color:darkslategrey;
+    font-size:25px;
+    text-align:center;
+}
+
+
+p {
+    text-align:justify;
+    color:rgb(219, 6, 6);
+    
+}
+
+#principalmenu{
+    margin:5px;
+    padding:0px;
+    list-style-type:none;
+}
+
+#principalmenu a {
+    width:100px;
+    text-decoration:none;
+    text-align:center;
+    color:darkgray;
+    background-color: darkslategrey;
+    padding:3px 5px;
+    border-right:1px solid darkslategray;
+    display:block;
+}
+
+#principalmenu li{
+    float:left;
+}
+
+#principalmenu a:hover{
+    background-color:darkgrey;
+}
+
+#cabecera{
+    background-color: darkslategray;
+    color:darkolivegreen;
+    font-size: 18px;
+}
