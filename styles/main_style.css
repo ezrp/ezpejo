@@ -4,7 +4,8 @@
 }
 
 body{
-    background-color:rgb(243, 243, 243);
+    background-color:#fff;
+    font-family:Helvetica,sans-serif;
 }
 
 .menu{
@@ -14,5 +15,5 @@ body{
 }
 
 #content{
-    padding-left:250px;
+    padding-left:260px;
 }
