@@ -4,52 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/main_style.css">
     <title>ezpejo</title>
+    <link rel="stylesheet" href="css/main_style.css">
+    <link rel="stylesheet" href="css/sections_style.css">
+    <script src="js/js-index.js"></script>
 </head>
-
-
 <body>
- <!--menu-->
-<nav class='menu'>
-    <iframe src="menu.html" ></iframe>
-</nav>
+    <nav class='menu'>
+        <ul id='menu-bar'>
+            <li id='home-menu'><a href='#main-section'>Home</li></a>
+            <li id='project-menu'><a href='#section1'>About</a></li>
+            <li id='about-menu'><a href='#section2'>Projects</a></li>
+            <li id='languaje-menu'>EN|ES</li>
+        </ul>
+    </nav>
 
-<main id='home'>
-    <h1>Principal</h1>
+<main id='main-section'>
+<div>
+    <canvas id='canvas' onmouseover='mouseOver()' onmouseout='mouseOut()'></canvas>
+    <h1 id='main-title' class='select-none'>E<span id='rotate-letter'>Z</span>PEJO</h1>
+</div>
 </main>
 
-<section class='content'>
-    <h2 id='projects'>Projects</h2>
-    <div id='project1'>
-        <h3>Project1</h3>
-        <p>ezpejo-espejo-ezpejo-ezpejo-ezpejo-espejo-ezpejo-ezpejo</p>
-        <p>ezpejo-espejo-ezpejo-ezpejo-ezpejo-espejo-ezpejo-ezpejo</p>
-    </div>
-    <div id='project2'>
-        <h3>Project2</h3>
-        <p>ezpejo-espejo-ezpejo-ezpejo-ezpejo-espejo-ezpejo-ezpejo</p>
-        <p>ezpejo-espejo-ezpejo-ezpejo-ezpejo-espejo-ezpejo-ezpejo</p>
-    </div>
-    <div id='project3'>
-        <h3>Project3</h3>
-        <p>ezpejo-espejo-ezpejo-ezpejo-ezpejo-espejo-ezpejo-ezpejo</p>
-        <p>ezpejo-espejo-ezpejo-ezpejo-ezpejo-espejo-ezpejo-ezpejo</p>
-    </div>
-    
-    <div id='about'>
-        <h2>About</h2>
-        <p>ezpejo-espejo-ezpejo-ezpejo-ezpejo-espejo-ezpejo-ezpejo</p>
-    </div>
-    
-    
-    <div id='contact'>
-        <h2>Contact</h2>
-        <p>ezpejo-espejo-ezpejo-ezpejo-ezpejo-espejo-ezpejo-ezpejo</p>
-    </div>
+<div id='section1' data-anchor='secondPage'>
+    <h1 id='about-title'></h1>
+</div>
 
-</section>
-
+<div id='section2' data-anchor='thirdPage'>
+    <h1 id='projects-title'></h1>
+</div>
 
 </body>
 </html>
