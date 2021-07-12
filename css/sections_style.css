@@ -1,0 +1,31 @@
+#main-section{
+    height:560px;
+}
+#canvas {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #555;
+    z-index: 999;
+}
+span{
+    transform:rotate(40deg);
+    
+}
+.changeLetter{
+    color: #095992;
+    transition-duration:1s;
+}
+.unchangeLetter{
+    color:rgba(207, 207, 207,.9);
+    transition-duration:1s;
+}
+
+#section1{
+    height: 542px;
+}
+
+#section2{
+    height: 542px;
+}
