@@ -13,12 +13,9 @@ $(document).ready(function(){
 });
 
 function mouseOver(){
-    document.getElementById('rotate-letter').className='changeLetter';
+    document.getElementById('change-letter').className='changeLetter';
 }
 
 function mouseOut(){
-    document.getElementById('rotate-letter').className='unchangeLetter';
+    document.getElementById('change-letter').className='unchangeLetter';
 }
-
-
-/*Canvas*/
