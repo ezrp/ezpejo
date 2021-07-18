@@ -14,25 +14,32 @@
     <nav class='menu'>
         <ul id='menu-bar'>
             <li id='home-menu'><a href='#main-section'>Home</li></a>
-            <li id='project-menu'><a href='#section1'>About</a></li>
-            <li id='about-menu'><a href='#section2'>Projects</a></li>
-            <li id='languaje-menu'>EN|ES</li>
+            <li id='about-menu'><a href='#section1'>About</a></li>
+            <li id='chapters-menu'><a href='#section2'>Chapters</a></li>
+            <li id='languaje-menu'>EN|ES|IT</li>
         </ul>
     </nav>
 
 <main id='main-section'>
 <div>
-    <canvas id='canvas' onmouseover='mouseOver()' onmouseout='mouseOut()'></canvas>
-    <h1 id='main-title' class='select-none'>E<span id='rotate-letter'>Z</span>PEJO</h1>
+    <canvas id='canvas' onmouseover='mouseOver()' onmouseout='mouseOut()'>Your browser does not support canvas</canvas>
+    <h1 id='main-title' class='select-none'>E<span id='change-letter'>Z</span>PEJO</h1>
 </div>
 </main>
 
-<div id='section1' data-anchor='secondPage'>
-    <h1 id='about-title'></h1>
+<div class='about' id='section1'>
+    <div class='column-left' id='about-paragraph'>
+        <h1 class='about-title'>About</h1><br>
+        <p>Hi, I'm <span id='about-ezp'>ezpejo</span>, I'm just anyone's idea, a whisper that has been turned into code and became a some kind of diary. I will tell you many things, some real others imaginary; at the end it does not matter.</p><br>
+        <p>One last thing, do not ask me about the author, I don't know who is he, or she, I don't know anything about the person who created me; after all I'm just an abstraction and nothing else.</p>
+    </div>
+    <div class='column-right' id='canvas-size'>
+        <canvas id='canvas-about'></canvas>
+    </div>
 </div>
 
-<div id='section2' data-anchor='thirdPage'>
-    <h1 id='projects-title'></h1>
+<div id='section2'>
+    <h1 id='chapters-title'></h1>
 </div>
 
 </body>
