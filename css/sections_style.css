@@ -23,26 +23,24 @@
     height:100vh;
     padding-top:15%;
 }
-@media screen and (min-width:500px){
-    .about{
-        width:80%;
-        margin:0 auto;
-        display:block;
+.about{
+    width:80%;
+    margin:0 auto;
+    display:block;
         
-    }
-    .column-right{
-        position:relative;
-        box-sizing: inherit;
-        display:block;
-        width:100%;
-        margin-top:6%;
-    }
-    #canvas-about{
-        display:block;
-        margin:0 auto;
-        border: 1px solid #555;
-        width:60%;
-    }
+}
+.column-right{
+    position:relative;
+    box-sizing: inherit;
+    display:block;
+    width:100%;
+    margin-top:6%;
+}
+#canvas-about{
+    display:block;
+    margin:0 auto;
+    border: 1px solid #555;
+    width:60%;
 }
 @media screen and (min-width:700px){
     .about{
