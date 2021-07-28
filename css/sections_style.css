@@ -23,6 +23,7 @@
     height:100vh;
     padding-top:15%;
 }
+
 .about{
     width:80%;
     margin:0 auto;
@@ -42,6 +43,7 @@
     border: 1px solid #555;
     width:60%;
 }
+
 @media screen and (min-width:700px){
     .about{
         width:80%;
@@ -75,7 +77,118 @@
 .about-title{
     font-size:18px;
 }
+
+
 /*Chapters*/
 #section2{
     height: 100vh;
+    padding-top:30%;
+    box-sizing:border-box;
+}
+img{
+    vertical-align:middle;
+}
+/* Slideshow container */
+.slideshow-container {
+    max-width: 80%;
+    position: relative;
+    margin: auto;
+  }
+@media screen and (min-width:700px){
+    #section2{
+        padding-top: 15%;
+    }
+    .slideshow-container{
+        max-width: 50%;
+    } 
+}
+.mySlides {
+    display: none;
+}
+  
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+  
+/* On hover next & previus bottons*/
+.prev:hover, .next:hover {
+    background-color: rgba(32, 32, 32, 0.6);
+}
+  
+/* Text */
+.text {
+    cursor:pointer;
+    color: #d6d6d6;
+    font-size: 13px;
+    font-family: Verdana,sans-serif;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 96%;
+    text-align: center;
+    transition: 0.6 ease;
+}
+.text:hover {
+    color:#ffffff;
+    font-size: 14px;
+    transition: 0.6 ease;
+}
+/* Numbers */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 11px;
+    font-family: Verdana,sans-serif;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+  
+/* The dots */
+.dot {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0px 4px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+  
+.active, .dot:hover {
+    background-color: #717171;
+}
+  
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+  
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+  
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
 }
