@@ -40,7 +40,7 @@
 #canvas-about{
     display:block;
     margin:0 auto;
-    border: 1px solid #555;
+    
     width:60%;
 }
 
@@ -59,7 +59,7 @@
     }
     #canvas-about{
         display:block;
-        border: 1px solid #555;
+        
         width:70%;
     }
 }
@@ -139,10 +139,9 @@ img{
     font-family: Verdana,sans-serif;
     padding: 8px 12px;
     position: absolute;
-    bottom: 8px;
+    bottom: 1px;
     width: 96%;
     text-align: center;
-    transition: 0.6 ease;
 }
 .text:hover {
     color:#ffffff;
@@ -167,10 +166,14 @@ img{
     margin: 0px 4px;
     background-color: #bbb;
     border-radius: 50%;
-    display: inline-block;
+    display:none;
     transition: background-color 0.6s ease;
 }
-  
+@media screen and (min-width:700px){
+    .dot{
+        display: inline-block;
+    }
+} 
 .active, .dot:hover {
     background-color: #717171;
 }
