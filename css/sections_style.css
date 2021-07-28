@@ -128,25 +128,25 @@ img{
   
 /* On hover next & previus bottons*/
 .prev:hover, .next:hover {
-    background-color: rgba(32, 32, 32, 0.6);
+    background-color: rgba(5, 11, 22, .6);
 }
   
 /* Text */
 .text {
     cursor:pointer;
     color: #d6d6d6;
-    font-size: 13px;
+    font-size: 14px;
     font-family: Verdana,sans-serif;
     padding: 8px 12px;
     position: absolute;
-    bottom: 1px;
-    width: 96%;
+    background-color: rgba(5,11,22,.6);
+    bottom: 4px;
+    width: 50%;
     text-align: center;
 }
 .text:hover {
     color:#ffffff;
-    font-size: 14px;
-    transition: 0.6 ease;
+    background-color:rgba(5,11,22,.8);
 }
 /* Numbers */
 .numbertext {
