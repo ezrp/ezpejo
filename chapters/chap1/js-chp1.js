@@ -22,7 +22,6 @@ function moveFree(){
             drawBall();
             x+=vx;
             y+=vy;
-            console.log(x);
         }
     }
     setInterval(draw,10);
