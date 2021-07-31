@@ -40,7 +40,7 @@ a:hover{
 }
 
 
-/*SECTIONS*/
+/*SECTION 1*/
 #section1,#section2{
     display:inline-block;
 }
@@ -61,7 +61,24 @@ h1{
     font-size:15px;
     line-height:22px;
 }
-
+.button{
+    user-select:none;
+    margin:0 auto;
+    cursor:pointer;
+    width: 6.5em;
+    height: 20px;
+    font-size:12px;
+    padding:2px;
+    text-align:center;
+    font-family:Helvetica,sans-serif;
+    border: solid 1px #D0D0D0;
+    background-color: rgb(224, 224, 224);
+    border-radius:5px;
+    color:rgb(20, 20, 20);
+}
+.button:hover{
+    background-color: rgba(255, 255, 255, 0.8);
+}
 /*SECTION 2*/
 #section2{
     height:100%;
@@ -82,23 +99,6 @@ h1{
     width:70%;
     height:70%;
     
-}
-.button{
-    margin:0 auto;
-    cursor:pointer;
-    width: 6.5em;
-    height: 20px;
-    font-size:12px;
-    padding:2px;
-    text-align:center;
-    font-family:Helvetica,sans-serif;
-    border: solid 1px #D0D0D0;
-    background-color: rgb(224, 224, 224);
-    border-radius:5px;
-    color:rgb(20, 20, 20);
-}
-.button:hover{
-    background-color: rgba(255, 255, 255, 0.8);
 }
 
 /*FOOTER*/
