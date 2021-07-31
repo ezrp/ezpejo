@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birth</title>
+    <link rel="stylesheet" href="css-sto1.css">
+</head>
+
+<body>
+    <nav class='menu-chapt'>
+        <ul id='menu-bar'>
+            <li id='home-menu'><a href='#main-section'>Home</li></a>
+            <li id='chapters-menu'><a href=''>Chapters</a></li>
+            <li id='languaje-menu'><select name="language" id="language">
+                <option value="">English</option>
+                <option value="">Español</option>
+                <option value="">Italiano</option>
+            </select>
+        </ul>
+    </nav>
+    
+    <div id='section1'>
+        <h1>Birth</h1>
+        <div class ='general-text'>
+        <p>Hi, like I said, I'm just an idea of someone else, and like any idea if it doesn't gets real, it dies, fortunately you can bring me alive.</p><br>
+        <div class='button' id='button-alive' onclick='drawBall()'>Bring me alive</div><br>
+        <p>Well, as you can see I'm just a ball that stays in a box. However, the things that are alive are usually moving around, so...</p><br>
+        <div class='button' id='button-movement' onclick='moveFree()'>Let me move</div><br>
+        <p>Now I'm dead, like you and any other person, I need some limits for my movements, I don't want to be totally free, I need a specific place to discover.</p><br>
+        <div class='button' id='button-context' onclick='moveLimits()'>Set limits</div><br>
+        </div>
+    </div>
+
+    <div id='section2'>
+        <div class='container-canvas'>
+            <canvas class='canvas' id='canvas1' style='border:1px solid;'></canvas>
+        </div>
+    </div>
+    
+    <footer>
+        <p class='text-footer'>Next</p>
+        <p class='text-footer' id='next-story'>Chapter 2 --></p>
+    </footer>
+    <script src="js-sto1.js"></script>
+</body>
+
+</html>
