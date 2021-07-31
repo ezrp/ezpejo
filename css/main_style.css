@@ -43,14 +43,15 @@ a{
     color:rgb(207, 207, 207);
     transition:0.6s ease;
 }
+a:hover{
+    color:#ffff;
+}
 #languaje-menu{
     float:right;
     margin-right:0;
     font-size:14px;
 }
-a:hover{
-    color:#ffff;
-}
+
 
 /*Title*/
 #main-title{
