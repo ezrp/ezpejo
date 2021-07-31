@@ -16,19 +16,16 @@ function drawBall(){
 
 function moveFree(){
     function draw(){
-        ctx.clearRect(0,0,cn.width,cn.height);
-        drawBall();
-        x+=vx;
-        y+=vy;
-        console.log(x);
-        if (x==230){
-            location.reload();
-            
+        
+        if (x<180){
+            ctx.clearRect(0,0,cn.width,cn.height);
+            drawBall();
+            x+=vx;
+            y+=vy;
+            console.log(x);
         }
     }
     setInterval(draw,10);
-    
-    
 }
 
 
@@ -36,6 +33,7 @@ var x2 = cn.width/12
 var y2 = cn.height/10
 
 function moveLimits(){
+    
     function drawBall2(){
         ctx.beginPath();
         ctx.arc(x2,y2,10,0,Math.PI*2);
