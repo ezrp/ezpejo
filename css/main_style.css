@@ -30,6 +30,7 @@ body::-webkit-scrollbar-thumb{
     font-family:Verdana,sans-serif;
     background-color: rgba(5,11,22,.7);
 }
+
 nav ul li{
     display:inline;
     text-decoration:none;
@@ -43,15 +44,21 @@ a{
     color:rgb(207, 207, 207);
     transition:0.6s ease;
 }
-a:hover{
-    color:#ffff;
-}
 #languaje-menu{
     float:right;
     margin-right:0;
     font-size:14px;
+    background-color: #050b16;
 }
-
+.language{
+    background-color: #050b16;
+    color: rgb(207, 207, 207);
+    border:none;
+    font-size:15px;
+}
+a:hover{
+    color:#ffff;
+}
 
 /*Title*/
 #main-title{
@@ -70,6 +77,30 @@ a:hover{
     -ms-user-select: none;
     user-select:none;
 }
+.container-icons1{
+    display:flex;
+    justify-content: center;
+    width:30%;
+    left:50%;
+    top:50%;
+    transform: translate(122%,1570%);
+}
+.fas{
+    color: rgba(207, 207, 207,.9);
+    font-size: 25px;
+    letter-spacing:30px;
+    transition:.6s;
+    padding-top:0.5%;
+}
+#eye{
+    color: rgba(207, 207, 207,.9);
+}
+#book{
+    color: rgba(207, 207, 207, .9);
+}
+#fire{
+    color: rgba(207, 207, 207,.9);
+}
 
 #about-title{
     font-family:Helvetica,Verdana,sans-serif;
@@ -80,14 +111,31 @@ a:hover{
 
 /*Footer*/
 footer{
-    width:100%;  
+    width:100%; 
+    margin-bottom:6px;
 }
 .footer-container{
+    margin:0 auto;
     font-family:Verdana,sans-serif;
     text-align:center;
-    font-size:10px;
+    width:60%;
+    
+}
+.footer-text, .footer-icons{
+    display:grid;
+    padding:1%;
+}
+.footer-text{
+    justify-content: center;
     color:rgb(207, 207, 207);
-    padding:2%;
-    margin:0% 0% 0% 3%;
+    font: 10px;
+}
+.fab{
+    color:rgba(207, 207, 207,.6);
+    font-size:35px;
+    transition:0.8s;
+}
+.fab:hover{
+    color:rgba(207, 207, 207,.9);
 }
 
