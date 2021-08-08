@@ -16,9 +16,9 @@
 <body>
     <nav class='menu'>
         <ul id='menu-bar'>
-            <li id='home-menu'><a href='#main-section'>Home</a></li>
+            <li id='home-menu'><a href='#main-section'>Home</li></a>
             <li id='about-menu'><a href='#section1'>About</a></li>
-            <li id='chapters-menu'><a href='#section2'>Chapters</a></li>
+            <li id='chapters-menu'><a href='#section2'>Stories</a></li>
             <li id='languaje-menu'>
                 <select name="language" class="language">
                     <option value="">English</option>
@@ -31,78 +31,114 @@
 
 <header>
 <div id='main-section'>
-<div>
-    <canvas id='canvas' onmouseover='mouseOver()' onmouseout='mouseOut()'>Your browser does not support canvas</canvas>
-    <h1 id='main-title' class='select-none'>E<span id='change-letter'>Z</span>PEJO</h1>
-</div>
-<div class='container-icons1'>
-    <i class="fas fa-eye" id='eye'></i>
-    <i class="fas fa-book-open" id='book'></i>
-    <i class="fas fa-fire" id='fire'></i>
-</div>
+    <div class='container-principal'>
+            <div class='div-title'>
+                <div class='canvas-title select-none' id='main-title' onmouseover='mouseOver()' onmouseout='mouseOut()'>
+                    <div id='title-text'>E<span id='change-letter'>Z</span>PEJO</div>
+                </div>
+            </div>
+            
+            <div class='div-icons' id='container-icon'>
+                <i class="fas fa-eye style-icons" id='eye'></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <i class="fas fa-book-open style-icons" id='book'></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <i class="fas fa-fire style-icons" id='fire'></i>
+            </div>
+    </div>
 </div>
 </header>
 
-<div class='about' id='section1'>
-    <div class='column-left' id='about-paragraph' onmouseover='init()'>
-        <h1 class='about-title'>About</h1><br>
-        <p>Hi, I'm <span id='about-ezp'>ezpejo</span>, I'm just an idea of anyone's mind, a whisper that has been turned into code and has became a some kind of story teller. I will tell you many things, some real some imaginary; at the end it doesn't matter.</p><br>
-        <p>Below, you will find my stories, my projects, and my thoughts. I hope to entertain you, nothing more than that. If you're asking yourself who is the person who created me, you should loof for somewhere else, because I don't know.</p>
-    </div>
-    <div class='column-right' id='canvas-size'>
-        <canvas id='canvas-about' onmouseover = 'init()'></canvas>
-    </div>
-</div>
-
-<div id='section2'>
-    
-    <!--Slideshow container-->
-    <div class = 'slideshow-container'>
-
-        <!--Images with number and caption text-->
-        <div class ='mySlides fade'>
-            <div class='numbertext'>1 / 3</div>
-            <img src="img/andre-taissin-ousSgN4nhNU-unsplash.jpg" alt="" style='width:100%'>
-            <a href="chapters/chap1/index-chp1.html"><div class='text'>1. Birth</div></a>
+    <div class='about' id='section1'>
+        <div class='column-left' id='about-paragraph' onmouseover='init(), colors()' onmouseleave = 'no_colors()'>
+            <h1 class='about-title'>About</h1><br>
+            <p>Hi, I'm e<span id='about-ezp-letter'>z</span>pejo, I'm just an idea of anyone's mind, a whisper that has been turned into code and has became a some kind of story teller. I will tell you many things, some real some imaginary; at the end it doesn't matter.</p><br>
+            <p>Below, you will find my stories, my projects, and my thoughts. I hope to entertain you, nothing more than that. If you're asking yourself who is the person who created me, you should look for it somewhere else, because I don't know.</p>
         </div>
+        <div class='column-right' id='canvas-size'>
+            <canvas id='canvas-about' onmouseover = 'init()'></canvas>
+        </div>
+    </div>
 
-        <div class ='mySlides fade'>
-            <div class='numbertext'>2 / 3</div>
-            <img src="https://www.w3schools.com/howto/img_snow_wide.jpg" alt="" style='width:100%'>
-            <div class='text'>Chapter 2</div>
+    <div id='section2'>
+        <!--Carrousel-->
+        <div class='carrousel'>
+            <div class = 'slideshow-container'>
+
+                <!--Images with number and caption text-->
+                <div class ='mySlides fade'>
+                    <div class='numbertext'>1 / 3</div>
+                    <img src="img/andre-taissin-ousSgN4nhNU-unsplash.jpg" alt="" style='width:100%'>
+                    <a href="chapters/chap1/index-chp1.html"><div class='text'>Birth</div></a>
+                </div>
+
+                <div class ='mySlides fade'>
+                    <div class='numbertext'>2 / 3</div>
+                    <img src="https://www.w3schools.com/howto/img_snow_wide.jpg" alt="" style='width:100%'>
+                    <div class='text'>Chapter 2</div>
+                </div>
+                
+                <div class ='mySlides fade'>
+                    <div class='numbertext'>3 / 3</div>
+                    <img src="https://www.w3schools.com/howto/img_nature_wide.jpg" alt="" style='width:100%'>
+                    <div class='text'>Chapter 3</div>
+                </div>
+
+                <!--Buttons-->
+                <a class='prev' onclick='plusSlides(-1)'>&#10094;</a>
+                <a class='next' onclick='plusSlides(1)'>&#10095;</a>
+            </div>
+            <br>
+
+            <!--Circles-->
+            <div style='text-align:center'>
+                <span class='dot' onclick='currentSlide(1)'></span>
+                <span class='dot' onclick='currentSlide(2)'></span>
+                <span class='dot' onclick='currentSlide(3)'></span>
+            </div>
+            <script src="js/slideshow.js"></script>
+            <br>
+            
         </div>
         
-        <div class ='mySlides fade'>
-            <div class='numbertext'>3 / 3</div>
-            <img src="https://www.w3schools.com/howto/img_nature_wide.jpg" alt="" style='width:100%'>
-            <div class='text'>Chapter 3</div>
+        <!--Grid-->
+        <div class='grid typography select-none'>
+            
+            <div class='stories-vignete' id='up-left' onmouseover='showIcon()' onmouseleave='hideIcon()'>
+                <a href="chapters/chap1/index-chp1.html">
+                <div class='story-icons' id='visible1'><i class="fas fa-book"></i></div>
+                <div class='story-icons' id='hidden1'><i class="fas fa-birthday-cake"></i></div>
+                <div class = 'div-titles titles-stories' id='story1'>Birth</div></a>
+            </div>
+            
+            <div class='stories-vignete titles-stories' id='up-right'>
+                <div class='story-icons'><i class="fas fa-book"></i></div>
+                <div class = 'div-titles titles-stories' id='story2'>Story 2</div>
+            </div>
+            
+            <div class='stories-vignete titles-stories' id='down-left'>
+                <div class='story-icons'><i class="fas fa-book"></i></div>
+                <div class = 'div-titles titles-stories' id='story3'>Story 3</div>
+            </div>
+            
+            <div class='stories-vignete titles-stories' id='down-right'>
+                <div class='story-icons'><i class="fas fa-book"></i></div>
+                <div class = 'div-titles titles-stories' id='story4'>Story 4</div>
+            </div>
         </div>
-
-        <!--Buttons-->
-        <a class='prev' onclick='plusSlides(-1)'>&#10094;</a>
-        <a class='next' onclick='plusSlides(1)'>&#10095;</a>
-    </div>
-    <br>
-
-    <!--Circles-->
-    <div style='text-align:center'>
-        <span class='dot' onclick='currentSlide(1)'></span>
-        <span class='dot' onclick='currentSlide(2)'></span>
-        <span class='dot' onclick='currentSlide(3)'></span>
-    </div>
-    <script src="js/slideshow.js"></script>
-</div>
-
-<footer>
-    <div class='footer-container'>
-        <div class='footer-text'>
-            <p>Designed and built by Renato Ponce, 2021</p>
-        </div>
-        <div class='footer-icons'>
-            <a href="https://github.com/ezrp"><i class="fab fa-github"></i></a>
+        <div id='arrow-chapdown'>
+            <a href="#footer-link"><i class="fas fa-angle-down" id='arrow-down'></i></a>
         </div>
     </div>
-</footer>
+
+    <footer>
+        <div class='footer-container' id='footer-link'>
+            <div class='footer-text'>
+                <p>Designed and built by RP, 2021</p>
+            </div>
+            <div class='footer-icons'>
+                <a href="https://github.com/ezrp"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
 
 </body>
     
