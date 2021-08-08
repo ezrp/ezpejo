@@ -26,3 +26,14 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
+
+function showIcon(){
+  document.getElementById('hidden1').style.display='block';
+  document.getElementById('visible1').style.display='none';
+
+}
+
+function hideIcon(){
+  document.getElementById('visible1').style.display='block';
+  document.getElementById('hidden1').style.display='none';
+}
