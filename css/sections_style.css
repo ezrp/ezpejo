@@ -115,11 +115,10 @@
     border-radius: 10px;
 }
 .story-iconsSlide{
-    color:rgba(207, 207, 207,.9);
     margin:0 auto;
-    padding-top:50px;
-    font-size:65px;
-    width:15%;
+    padding-top:40px;
+    font-size:60px;
+    width:30%;
 }
 .zoom-vignetes{
     background-color: rgba(2, 33, 68,.7);
@@ -218,24 +217,6 @@
 /*Grid-Stories*/
 .grid{
     display:none;
-    width:80%;
-    margin:0 auto;
-    text-align: center;
-}
-.stories-vignete{
-    display:inline-block;
-    height:200px;
-    margin:10px;
-    width:40%;
-    border-radius: 10px;
-}
-#up-left, #up-right, #down-left, #down-right{
-    background-color: rgba(2, 33, 68,.7);
-    transition:.4s;
-}
-#up-left:hover, #up-right:hover, #down-left:hover, #down-right:hover {
-    background-color: rgba(3, 41, 85, 0.9);
-    transform:scale(1.05,1.05);
 }
 .div-titles{
     background-color:rgba(5,11,22,.6);
@@ -258,12 +239,8 @@
     font-size:65px;
     margin-top:30px;
     width:100%;
-    transition: .6s;
 }
-#hidden1{
-    display:none;
-    color:rgb(206, 7, 156);
-}
+
 
 /*Link-Footer*/
 #arrow-chapdown{
@@ -284,6 +261,28 @@
 
 
 /*MEDIA QUERIES BREAKPOINTS*/
+@media screen and (min-width: 250px){
+    .slideshow-container {
+        max-width: 70%;
+    }
+    .prev, .next {
+        width: auto;
+        margin-top: -22px;
+        padding: 2px;
+        font-size: 25px;
+    }
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+    #visible1{
+        display:none;
+    }
+    #hidden1{
+        display:block;
+        color:rgb(206, 7, 156);
+    }
+}
 @media screen and (min-width: 480px){
     #section2{
         padding-top: 20%;
@@ -291,8 +290,19 @@
     .slideshow-container{
         max-width: 70%;
     }
+    .story-iconsSlide{
+        color:rgba(207, 207, 207,.9);
+        margin:0 auto;
+        padding-top:50px;
+        font-size:65px;
+        width:15%;
+    }
     .dot{
         display: inline-block;
+    }
+    #hidden1{
+        display:none;
+        color:rgb(206, 7, 156);
     }
 }
 
@@ -319,10 +329,31 @@
     .carrousel{
         display:none;
     }
-    .dot{
-        display: inline-block;
-    }
+
+    /*GRID VIGNETES*/
     .grid{
         display:block;
+        width:80%;
+        margin:0 auto;
+        text-align: center;
+    }
+    .stories-vignete{
+        display:inline-block;
+        height:200px;
+        margin:10px;
+        width:40%;
+        border-radius: 10px;
+    }
+    #up-left, #up-right, #down-left, #down-right{
+        background-color: rgba(2, 33, 68,.7);
+        transition:.4s;
+    }
+    #up-left:hover, #up-right:hover, #down-left:hover, #down-right:hover {
+        background-color: rgba(3, 41, 85, 0.9);
+        transform:scale(1.05,1.05);
+    }
+    #hidden1Grid{
+        display:none;
+        color:rgb(206, 7, 156);
     }
 }
