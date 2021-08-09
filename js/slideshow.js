@@ -30,10 +30,19 @@ function showSlides(n) {
 function showIcon(){
   document.getElementById('hidden1').style.display='block';
   document.getElementById('visible1').style.display='none';
-
 }
 
 function hideIcon(){
   document.getElementById('visible1').style.display='block';
   document.getElementById('hidden1').style.display='none';
+}
+
+function showIcon2(){
+  document.getElementById('hidden1Grid').style.display='block';
+  document.getElementById('visible1Grid').style.display='none';
+}
+
+function hideIcon2(){
+  document.getElementById('visible1Grid').style.display='block';
+  document.getElementById('hidden1Grid').style.display='none';
 }
