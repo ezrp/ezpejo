@@ -244,13 +244,13 @@
 
 /*Link-Footer*/
 #arrow-chapdown{
-    width:10%;
+    width:5%;
     margin:0 auto;
     text-align:center;
     padding:2%;
 }
 #arrow-down{
-    margin-left:25px;
+    margin:0 auto;
     font-size:25px;
     transition: 0.6s;
 }
@@ -285,7 +285,7 @@
 }
 @media screen and (min-width: 480px){
     #section2{
-        padding-top: 20%;
+        padding-top: 25%;
     }
     .slideshow-container{
         max-width: 70%;
@@ -299,6 +299,9 @@
     }
     .dot{
         display: inline-block;
+    }
+    #visible1{
+        display:block;
     }
     #hidden1{
         display:none;
