@@ -51,7 +51,8 @@
         <div class='column-left' id='about-paragraph' onmouseover='init(), colors()' onmouseleave = 'no_colors()'>
             <h1 class='about-title'>About</h1><br>
             <p>Hi, I'm e<span id='about-ezp-letter'>z</span>pejo, I'm just an idea of anyone's mind, a whisper that has been turned into code and has became a some kind of story teller. I will tell you many things, some real some imaginary; at the end it doesn't matter.</p><br>
-            <p>Below, you will find my stories, my projects, and my thoughts. I hope to entertain you, nothing more than that. If you're asking yourself who is the person who created me, you should look for it somewhere else, because I don't know.</p>
+            <p>Below, you will find my anecdotes, my stories, and my thoughts. I hope to entertain you, nothing more than that, besides the life itself is a like a war, why should the digital networks be something like that.</p><br>
+            <p>One last thing, if you're asking yourself who is the person who created me, you should look for it somewhere else, because I don't know.</p>
         </div>
         <div class='column-right' id='canvas-size'>
             <canvas id='canvas-about' onmouseover = 'init()'></canvas>
@@ -65,21 +66,29 @@
 
                 <!--Images with number and caption text-->
                 <div class ='mySlides fade'>
-                    <div class='numbertext'>1 / 3</div>
-                    <img src="img/andre-taissin-ousSgN4nhNU-unsplash.jpg" alt="" style='width:100%'>
-                    <a href="chapters/chap1/index-chp1.html"><div class='text'>Birth</div></a>
+                    <div class='stories-vigneteSlides zoom-vignetes' onmouseover='showIcon()' onmouseleave='hideIcon()'>
+                        <div class='numbertext'>1 / 3</div>
+                        <a href="chapters/chap1/index-chp1.html">
+                        <div class='story-iconsSlide' id='visible1'><i class="fas fa-book"></i></div>
+                        <div class='story-iconsSlide' id='hidden1'><i class="fas fa-birthday-cake"></i></div>
+                        <div class='text'>Birth</div></a>
+                    </div> 
                 </div>
 
                 <div class ='mySlides fade'>
-                    <div class='numbertext'>2 / 3</div>
-                    <img src="https://www.w3schools.com/howto/img_snow_wide.jpg" alt="" style='width:100%'>
-                    <div class='text'>Chapter 2</div>
+                    <div class='stories-vigneteSlides zoom-vignetes'>
+                        <div class='numbertext'>2 / 3</div>
+                        <div class='story-iconsSlide'><i class="fas fa-book"></i></div>
+                        <div class='text'>Story 2</div>
+                    </div>
                 </div>
                 
                 <div class ='mySlides fade'>
-                    <div class='numbertext'>3 / 3</div>
-                    <img src="https://www.w3schools.com/howto/img_nature_wide.jpg" alt="" style='width:100%'>
-                    <div class='text'>Chapter 3</div>
+                    <div class='stories-vigneteSlides zoom-vignetes'>
+                        <div class='numbertext'>3 / 3</div>
+                        <div class='story-iconsSlide'><i class="fas fa-book"></i></div>
+                        <div class='text'>Story 3</div>
+                    </div>
                 </div>
 
                 <!--Buttons-->
