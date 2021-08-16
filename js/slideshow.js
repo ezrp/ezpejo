@@ -27,22 +27,12 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
-function showIcon(){
-  document.getElementById('hidden1').style.display='block';
-  document.getElementById('visible1').style.display='none';
+function colorIcon(){
+  document.getElementById('iconSlide1').style.color = 'rgb(206, 7, 156)';
+  document.getElementById('iconSlide2').style.color = 'rgb(216, 231, 2)'; 
 }
 
-function hideIcon(){
-  document.getElementById('visible1').style.display='block';
-  document.getElementById('hidden1').style.display='none';
-}
-
-function showIcon2(){
-  document.getElementById('hidden1Grid').style.display='block';
-  document.getElementById('visible1Grid').style.display='none';
-}
-
-function hideIcon2(){
-  document.getElementById('visible1Grid').style.display='block';
-  document.getElementById('hidden1Grid').style.display='none';
+function blackIcon(){
+  document.getElementById('iconSlide1').style.color = 'rgba(170, 170, 170, 0.9)';
+  document.getElementById('iconSlide2').style.color = 'rgba(170, 170, 170, 0.9)';
 }
