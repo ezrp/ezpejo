@@ -10,27 +10,39 @@
 </head>
 
 <body>
-    <nav class='menu-chapt'>
+    <nav class='menu-stories'>
         <ul id='menu-bar'>
-            <li id='home-menu'><a href='https://ezrp.github.io/ezpejo'>Home</a></li>
-            <li id='chapters-menu'><a href=''>Chapters</a></li>
-            <li id='languaje-menu'><select name="language" class="language">
-                <option value="">English</option>
-                <option value="">Español</option>
-                <option value="">Italiano</option>
-            </select>
+            <div class='container-menu'>
+                <div class='menu-left'>
+                    <li id='home-menu'><a href='https://ezrp.github.io/ezpejo'>Home</li></a>
+                    <li id='stories-menu'><a href="https://ezrp.github.io/ezpejo/index.html#section2">Stories</a></li>
+                </div>
+                <div class='menu-right'>
+                    <li id='languaje-menu'><select name="language" class="language">
+                    <option value="">English</option>
+                    <option value="">Español</option>
+                    <option value="">Italiano</option>
+                    </select></li>
+                </div>
+            </div>
         </ul>
     </nav>
     
     <div id='section1'>
         <h1>Birth</h1>
-        <div class ='general-text'>
-            <p>Hi, I'm baby ball, but you can call me BB. I'm just an idea of someone else, and like any idea if it doesn't get real in any way, not only using words, it dies; fortunately, you can bring me alive.</p><br>
-            <div class='button' id='button-alive' onclick='drawBall()'>Bring me alive</div><br>
-            <p>Well, as you can see I'm just a ball in a box. However, the things that are alive are usually moving around, look for yourself outside, the world functions only because everything is moving, the life itself began with movement and the time is its progression bar.<br> Therefore, it is not enough that only be in a place but in movement too, please let me move.</p><br>
-            <div class='button' id='button-movement' onclick='moveFree()'>Let me move</div><br>
-            <p>What the fuck!! Now I'm dead. Think about this one moment, like you and any other phenomenon in the world, even an abstract phenomenon like me, need some limits for its movements. I don't want to be totally free, do you? First, I need a specific place to discover by myself.</p><br>
-            <div class='button' id='button-context' onclick='moveLimits()'>Set limits</div><br>
+        <div class ='general-text selection'>
+            <p>Hi, I'm ball, but you can call me B. I'm just an idea of someone else, and like any idea if it doesn't get real in any way, not only with the use of words, it dies; fortunately, you can bring me alive.</p><br>
+            <div class='button' id='button-alive' onclick='drawBall()'>Bring <span class='ballName'>B</span> alive</div><br>
+            <p>Well, as you can see I'm just a ball in a box. However, the things that are alive are usually moving around, <span id='secret1' onclick='sound()'>look</span> for yourself outside, the world functions only because everything is moving, the life itself began with movement and the time is its progression bar.<br> 
+                <br>Therefore, it is not enough that only be in a place but in movement too, please let me move.</p><br>
+            <div class='button' id='button-movement' onclick='moveFree()'>Let <span class='ballName'>B</span> move</div><br>
+            <p>Now I'm dead. Think about this one moment, like you and any other phenomenon in the world, even an abstract phenomenon like me, need some limits for its movements. I don't want to be totally free, do you? First, I need a specific place to discover by myself.</p><br>
+            <div class='button' id='button-context' onclick='moveLimits()'>Set <span class='ballName'>B</span>'s limits</div><br>
+            <p>Thanks! Now, I can live without limits, only the ones that are necessary, but life is like this. We are not in completly freedom, your movements as mine are in a limited environment, like a canvas, and each movement has been conditionated by something inside your brain and outside you, in your context. <br>
+                <br>For example, did you press the buttoms before? Why? I already knew that you would press them. Around us there are many things that told us what to do and what not to do, such as the traffic lights, or the design by which are coded the buttoms in a web page, but I almost sure that you didn't find the button that do not look like a button.<br><br> Where could it be?</p><br>
+            <div class='button2' id='button-find'>I found it!</div>
+            <div class='button2' id='button-notfind'>Couldn't find it</div>
+
         </div>
     </div> 
 
@@ -40,18 +52,14 @@
         </div>
     </div>
     
-    <footer>
+    <footer class='footer'>
         <div class='container-footer'>
-            <div id='footer-left'>
-                <p class='text-footer' id='active-chap'>1. Birth</p>
+            <div>
+                <p class='title-footer'>Pages:</p>
             </div>
-            <div id='footer-right'>
-                <p class='text-footer' id='next-chap'>2. Chapter</p>
-            </div>
-        </div>
-        <div class='container-logo'>
-            <div id='footer-logo'>
-                <p class='text-logo' id='text-logo'><a href="https://ezrp.github.io/ezpejo">E<span id='change-letter'>Z</span>PEJO</a></p>
+            <div class='pages-numbers'>
+                <p class='text-footer' id='page-1'>1</p>&nbsp;&nbsp;&nbsp;&nbsp;
+                <p class='text-footer' id='page-2'>2</p>
             </div>
         </div>
     </footer>
