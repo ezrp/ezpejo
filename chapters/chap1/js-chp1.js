@@ -58,4 +58,8 @@ function moveLimits(){
     setInterval(draw2,10);
 }
 
-
+function sound(){
+    var sound = document.createElement('iframe');
+    sound.setAttribute('src','sounds/baka.mp3');
+    document.body.appendChild(sound);
+}
