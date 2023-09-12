@@ -58,7 +58,7 @@
             margin-left: 5px;
         }
         
-        /* Styles for the eyes */
+         /* Styles for the eyes */
         .eyes {
             position: fixed;
             bottom: 20px;
@@ -76,6 +76,8 @@
             position: relative;
             border: 1.5px solid #000;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Added shadow for elegance */
+            overflow: hidden; /* Hide the pupil during blink */
+            transition: height 0.15s; /* Smooth blink effect */
         }
 
         .pupil {
@@ -135,6 +137,26 @@
                 pupils[index].style.transform = `translate(-50%, -50%) translate(${pupilX}px, ${pupilY}px)`;
             });
         });
+
+        // Blinking effect
+        function blink() {
+            eyes.forEach(eye => {
+                eye.style.height = '5px'; // Close the eye
+            });
+
+            setTimeout(() => {
+                eyes.forEach(eye => {
+                    eye.style.height = '30px'; // Open the eye
+                });
+            }, 150); // Duration of the blink
+
+            // Set a random time for the next blink
+            const randomTime = Math.random() * (5000 - 2000) + 2000; // Random time between 2s and 5s
+            setTimeout(blink, randomTime);
+        }
+
+        blink(); // Start the blinking effect
+
     </script>
 </body>
 </html>
