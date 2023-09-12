@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Attention: Gaze vs. Arrows</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            margin-bottom: 50px;
+        }
+
+        ul {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        li {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            display: block;
+            transition: background-color 0.3s;
+        }
+
+        a:hover {
+            background-color: #f0f0f0;
+        }
+
+        .authors {
+            font-size: 0.8em;
+            margin-top: 5px;
+            display: block;
+        }
+
+        .year {
+            font-weight: normal;
+            margin-left: 5px;
+        }
+        
+        /* Styles for the eyes */
+        .eyes {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 15px;
+        }
+
+        .eye {
+            width: 30px;
+            height: 30px;
+            background-color: #fff;
+            border-radius: 50%;
+            position: relative;
+            border: 1.5px solid #000;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Added shadow for elegance */
+        }
+
+        .pupil {
+            width: 10px;
+            height: 10px;
+            background-color: #000;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            pointer-events: none; /* So it doesn't interfere with mouse events */
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Social Attention: Gaze vs. Arrows</h1>
+    <ul>
+        <li>
+            <a href="https://link.springer.com/article/10.3758/s13423-018-1457-2" target="_blank">"Arrows don’t look at you: Qualitatively different attentional mechanisms triggered by gaze and arrows"</a>
+            <span class="authors">Andrea Marotta, Rafael Román-Caballero & Juan Lupiáñez<span class="year">(2018)</span></span>
+        </li>
+        <li>
+            <a href="https://www.sciencedirect.com/science/article/pii/S0028393219300752" target="_blank">"Are eyes special? Electrophysiological and behavioural evidence for a dissociation between eye-gaze and arrows attentional mechanisms"</a>
+            <span class="authors">Andrea Marotta, Juan Lupiáñez, Rafael Román-Caballero, Cristina Narganes-Pineda, Elisa Martín-Arévalo<span class="year">(2019)</span></span>
+        </li>
+        <li>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/35666922/" target="_blank">"Gaze elicits social and nonsocial attentional orienting: An interplay of shared and unique conflict processing mechanisms"</a>
+            <span class="authors">Klara Hemmerich, Cristina Narganes-Pineda, Andrea Marotta, Elisa Martín-Arévalo, Luis Jiménez, Juan Lupiáñez<span class="year">(2022)</span></span>
+        </li>
+    </ul>
+
+    <!-- Eyes at the bottom of the page -->
+    <div class="eyes">
+        <div class="eye">
+            <div class="pupil"></div>
+        </div>
+        <div class="eye">
+            <div class="pupil"></div>
+        </div>
+    </div>
+
+    <script>
+        const eyes = document.querySelectorAll('.eye');
+        const pupils = document.querySelectorAll('.pupil');
+
+        document.addEventListener('mousemove', (e) => {
+            eyes.forEach((eye, index) => {
+                const boundingBox = eye.getBoundingClientRect();
+                const eyeCenterX = boundingBox.left + boundingBox.width / 2;
+                const eyeCenterY = boundingBox.top + boundingBox.height / 2;
+                const angle = Math.atan2(e.clientY - eyeCenterY, e.clientX - eyeCenterX);
+                const distance = Math.min(eye.offsetWidth / 4, boundingBox.width / 2 - pupils[index].offsetWidth / 2);
+                const pupilX = distance * Math.cos(angle);
+                const pupilY = distance * Math.sin(angle);
+                pupils[index].style.transform = `translate(-50%, -50%) translate(${pupilX}px, ${pupilY}px)`;
+            });
+        });
+    </script>
+</body>
+</html>
