@@ -129,7 +129,7 @@ a:hover::after {
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     ul {
         padding: 0 5px;
     }
