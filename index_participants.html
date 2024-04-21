@@ -30,7 +30,7 @@
         <li>
             <span class = "p2">Si tienes cualquier pregunta puedes escribir a:</span>
             <br>
-            <span class="mail">greta.castellanelli@studenti.unipd.it <i class="fas fa-copy" style = "cursor: pointer;" onclick="copyEmail()"></i></span>
+            <span class="mail">greta.castellanelli@studenti.unipd.it<i class="fas fa-copy" style = "cursor: pointer;" onclick="copyEmail()"></i></span>
             
             <!-- Eyes at the bottom -->
             <div class="eyes">
@@ -82,12 +82,12 @@
         // Blinking effect
         function blink() {
             eyes.forEach(eye => {
-                eye.style.height = '5px'; // Close the eye
+                eye.style.transform = 'scaleY(0.1)'; // Compress the eye vertically
             });
 
             setTimeout(() => {
                 eyes.forEach(eye => {
-                    eye.style.height = '30px'; // Open the eye
+                    eye.style.transform = 'scaleY(1)'; // Return to normal scale
                 });
             }, 150); // Duration of the blink
 
