@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Attention Study: Gaze vs. Arrows</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px;
+            background-color: #4a2f5c;
+            color: #fff;
+            margin-bottom: 30px;
+        }
+
+        ul {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0;
+            list-style-type: none;
+            overflow:hidden;
+        }
+
+        li {
+            position: relative; 
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            background-image: url("img/background_page.jpg"); 
+            background-size: cover;
+            background-attachment: local;
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            height: 100px;
+        }
+
+        img {
+            width: 100px;
+            height: auto;
+            display: block;
+            margin: auto auto;
+            
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            position: relative;
+            overflow: hidden;
+            transition: color 0.3s;
+        }
+
+        a::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #333;
+            visibility: hidden;
+            transition: visibility 0s, transform 0.3s ease-in-out;
+            transform: scaleX(0);
+        }
+
+        a:hover::after {
+            visibility: visible;
+            transform: scaleX(1);
+        }
+
+        .p1 {
+            font-size: 1.2em;
+            margin-top: 5px;
+            display: block;
+            text-align: center;
+        }
+
+        .p2 {
+            font-size: 1em;
+            margin-top: 5px;
+            display: block;
+        }
+
+        .expName {
+            font-size: 1em;
+            text-align: center;
+            width: 100%;
+        }
+
+        .mail {
+            color: rgb(64, 0, 83);
+            text-align: center;
+        }
+
+        
+         /* Styles for the eyes */
+         .eyes {
+            display: flex;
+            justify-content: center; /* Center the eyes horizontally within the li */
+            gap: 15px; /* Space between the eyes */
+            margin-top: 20px; /* Additional space above the eyes */
+        }
+
+        .eye {
+            width: 30px;
+            height: 30px;
+            background-color: #fff;
+            border-radius: 50%;
+            border: 1.5px solid #000;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            transition: height 0.15s;
+            position: relative; 
+        }
+
+        .pupil {
+            width: 10px;
+            height: 10px;
+            background-color: #000;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            pointer-events: none; /* Pupil doesn't block mouse events */
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Estudio de Atención Social</h1>
+    <ul>
+        <li>
+            <span class = "p1">Desde el grupo de Neurociencia Cognitiva te agradecemos por participar en nuestro estudio de Atención Social.</span>
+            <img src="img/logo-cimcyc.png">
+            <img src="https://cimcyc.ugr.es/sites/centros/cimcyc/public/color/ugr-43c1f3fc/logo.svg">
+        </li>
+        <li>
+            <span class="p2">El estudio consiste en realizar una tarea sencilla en ordenador. Solamente dura 20 minutos, y se te asignarán 0.1 créditos para usarlo en cualquier curso de psicología experimental.</span>
+            <br>
+            <span class="p2">Estamos ubicados en el Laboratorio 2 del <a href = "https://cimcyc.ugr.es/informacion/localizacion-contacto" target = "_blank">CIMCYC</a></span>
+        </li>
+        <li>
+            <span class = "p2">Para participar solo tienes que ingresar en la plataforma <a href="https://ugr-cimcyc.sona-systems.com/" target = "_blank">sona</a> con tus credenciales y buscar el experimento:</span>
+            <div class = "expName"><a href = "https://ugr-cimcyc.sona-systems.com/exp_info.aspx?experiment_id=356" target = "_blank">"Atención Social: estudio con estímulos no sociales"</a></div>
+            <br>
+            <span class="p2">En caso de que no tengas una cuenta puedes crearla rápidamente: <a href = "https://ugr-cimcyc.sona-systems.com/student_new_user.aspx" target = "_blank">crear cuenta</a></span>
+        </li>
+        <li>
+            <span class = "p2">Si tienes cualquier pregunta puedes escribir a:</span>
+            <br>
+            <span class="mail">greta.castellanelli@studenti.unipd.it <i class="fas fa-copy" style = "cursor: pointer;" onclick="copyEmail()"></i></span>
+            
+            <!-- Eyes at the bottom -->
+            <div class="eyes">
+                <div class="eye">
+                    <div class="pupil"></div>
+                </div>
+                <div class="eye">
+                    <div class="pupil"></div>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+    
+
+    <script>
+        //Background
+        document.addEventListener("DOMContentLoaded", function() {
+            const lis = document.querySelectorAll("ul li");
+            let cumulativeOffset = 0;
+
+            lis.forEach((li, index) => {
+                
+                // Update the background position
+                li.style.backgroundPosition = `0px ${-cumulativeOffset}px`;
+                
+                // Adjust cumulativeOffset for next `<li>`
+                cumulativeOffset += li.offsetHeight + 20; // Increment by height of li and margin
+            });
+        });
+
+        //Animate eyes
+        const eyes = document.querySelectorAll('.eye');
+        const pupils = document.querySelectorAll('.pupil');
+
+        document.addEventListener('mousemove', (e) => {
+            eyes.forEach((eye, index) => {
+                const boundingBox = eye.getBoundingClientRect();
+                const eyeCenterX = boundingBox.left + boundingBox.width / 2;
+                const eyeCenterY = boundingBox.top + boundingBox.height / 2;
+                const angle = Math.atan2(e.clientY - eyeCenterY, e.clientX - eyeCenterX);
+                const distance = Math.min(eye.offsetWidth / 4, boundingBox.width / 2 - pupils[index].offsetWidth / 2);
+                const pupilX = distance * Math.cos(angle);
+                const pupilY = distance * Math.sin(angle);
+                pupils[index].style.transform = `translate(-50%, -50%) translate(${pupilX}px, ${pupilY}px)`;
+            });
+        });
+
+        // Blinking effect
+        function blink() {
+            eyes.forEach(eye => {
+                eye.style.height = '5px'; // Close the eye
+            });
+
+            setTimeout(() => {
+                eyes.forEach(eye => {
+                    eye.style.height = '30px'; // Open the eye
+                });
+            }, 150); // Duration of the blink
+
+            // Set a random time for the next blink
+            const randomTime = Math.random() * (5000 - 2000) + 2000; // Random time between 2s and 5s
+            setTimeout(blink, randomTime);
+        }
+
+        blink(); // Start the blinking effect
+
+        function copyEmail() {
+            const email = "greta.castellanelli@studenti.unipd.it";  // Change this if the email is dynamic
+            navigator.clipboard.writeText(email).then(() => {
+                alert('Email address copied to clipboard!');
+            }).catch(err => {
+                console.error('Failed to copy email: ', err);
+            });
+        }
+    </script>
+</body>
+</html>
